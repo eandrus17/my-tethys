@@ -1,0 +1,64 @@
+{% extends "about_me/base.html" %}
+{% load tethys_gizmos %}
+
+{% block header_buttons %}
+  <div class="header-button glyphicon-button" data-toggle="tooltip" data-placement="bottom" title="Help">
+    <a data-toggle="modal" data-target="#help-modal"><span class="glyphicon glyphicon-question-sign"></span></a>
+  </div>
+{% endblock %}
+
+{% block app_content %}
+  <h1>All About Emily</h1>
+  <p>First of all, I don't know how to change the side things << so I'm just putting everything right here. I think that's what we're supposed to do? Also idk what to talk about.</p>
+<p>This is the logo I'm trying to put but it's also not working for some reason:</p>
+<img src="/tethys_portal/images/e_logo.png">
+<p>Anyway...</p>
+<p>I played volleyball this morning so that's what I've been thinking about so I'll tell you a little bit about my volleyball career.</p>
+I started playing my 7th grade year at Jackson Street Middle School. I had never touched a volleyball before. I baaaaaarely made the team, like chosen 11th or 12th out of 12. Luckily I guess our coach some some potential or something.
+8th grade, I played. I still remember the first time I ever served the ball over the net overhand (it was on my birthday). <br>
+My freshman year, I started as a middle blocker. I had a coach that really pushed me to be better and stronger. She is 6'2" and one of my heroes. My sophomore year, I played varsity ball under some seniors that would threaten to break my fingers occasionally. To keep me humble I'm sure. They're great.
+Meanwhile, every summer I came to the BYU volleyball camps, and I probably owe making the team to those camps. I played with the likes of Maddie Graham who played on the BYU volleyball team until a year ago when she graduated.
+<br> My junior year, I finally started hitting strides as a player and even had an article written about me: <a href="https://www.siskiyoudaily.com/article/20111228/NEWS/312289975">Click here to see it.</a> Don't get too excited. It's short and I'm from a small town so it actually was pretty common for the high school sports to be in the paper.
+<br> My senior year, I was a captain of the team and we did some pretty cool things, like winning a tournament that our school hadn't won in 20 years, without our head coach. At the end of the season I was named one of the league MVPs. So that was fun. Here's a picture:
+<a href="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjnuOjYouLgAhXGwcQHHa6ZCjkQjRx6BAgBEAU&url=http%3A%2F%2Fwww.ridgecrestca.com%2Farticle%2F20121017%2Fsports%2F121019764&psig=AOvVaw0xmZYRcsEzO6RpcAw-4YgR&ust=1551574940642814"> I changed it to a link</a>
+because none of pictures are working but that's fine. Good times.
+<p>Thanks for reading!</p>
+
+
+
+
+
+
+{% endblock %}
+
+{# Use the after_app_content block for modals #}
+{% block after_app_content %}
+  <!-- Example Modal -->
+  <div class="modal fade" id="help-modal" tabindex="-1" role="dialog" aria-labelledby="help-modal-label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h5 class="modal-title" id="help-modal-label">Example Modal</h5>
+        </div>
+        <div class="modal-body">
+          <p>You can add custom buttons to the app header using the <code>header_buttons</code> block. Use anchor/link tags for the button and wrap it in a div with the class <code>header-button</code>. For buttons with the gliphyicons, add the <code>glyphicon-button</code> class as well.</p>
+          <p>Ever have trouble using a modal in a Tethys app? Use the <code>after_app_content</code> block for modal content to allow them to function properly. See: <a href="https://getbootstrap.com/javascript/#modals">Bootstrap Modals</a></p>
+          <p>Add tooltips to any element by adding the <code>data-toggle</code>, <code>data-placement</code>, and <code>title</code> attributes to the button. See: <a href="https://getbootstrap.com/javascript/#tooltips">Bootstrap Tooltips</a></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block app_actions %}
+  {% gizmo save_button %}
+  {% gizmo edit_button %}
+  {% gizmo remove_button %}
+  {% gizmo previous_button %}
+  {% gizmo next_button %}
+{% endblock %}
